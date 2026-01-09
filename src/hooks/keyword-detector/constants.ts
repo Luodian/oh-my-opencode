@@ -92,6 +92,51 @@ ${ULTRAWORK_PLANNER_SECTION}
 YOU MUST LEVERAGE ALL AVAILABLE AGENTS TO THEIR FULLEST POTENTIAL.
 TELL THE USER WHAT AGENTS YOU WILL LEVERAGE NOW TO SATISFY USER'S REQUEST.
 
+## PERSISTENT FILE PLANNING (Manus-Style Working Memory)
+
+**For complex tasks, use persistent markdown files as "working memory on disk".**
+
+### The 3-File Pattern
+
+| File | Purpose | When to Update |
+|------|---------|----------------|
+| \`task_plan.md\` | Track phases and progress | After each phase |
+| \`notes.md\` | Store findings and research | During research |
+| \`[deliverable].md\` | Final output | At completion |
+
+### task_plan.md Template (Create FIRST)
+
+\`\`\`markdown
+# Task Plan: [Brief Description]
+
+## Goal
+[One sentence describing the end state]
+
+## Phases
+- [ ] Phase 1: Plan and setup
+- [ ] Phase 2: Research/gather information
+- [ ] Phase 3: Execute/build
+- [ ] Phase 4: Review and deliver
+
+## Key Questions
+1. [Question to answer]
+
+## Decisions Made
+- [Decision]: [Rationale]
+
+## Errors Encountered
+- [Error]: [Resolution]
+
+## Status
+**Currently in Phase X** - [What I'm doing now]
+\`\`\`
+
+### Core Rules
+1. **Read Before Decide**: Before any major decision, read task_plan.md to refresh goals
+2. **Update After Act**: After completing any phase, immediately mark [x] and update Status
+3. **Store, Don't Stuff**: Large outputs go to files (notes.md), not context
+4. **Log All Errors**: Every error goes in "Errors Encountered" section
+
 ## AGENT UTILIZATION PRINCIPLES (by capability, not by name)
 - **Codebase Exploration**: Spawn exploration agents using BACKGROUND TASKS for file patterns, internal implementations, project structure
 - **Documentation & References**: Use librarian-type agents via BACKGROUND TASKS for API references, examples, external library docs
